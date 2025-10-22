@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "MuseExtension (Package)": {
+      "commandName": "MsixPackage",
+      "doNotLaunchApp": true
+    },
+    "MuseExtension (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
