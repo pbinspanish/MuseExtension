@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MT0+jVqxv2c=",
+  "dgSpecHash": "B3opBjorh/Y=",
   "success": true,
   "projectFilePath": "J:\\MuseExtension\\MuseExtension\\MuseExtension\\MuseExtension.csproj",
   "expectedPackageFiles": [
@@ -9,14 +9,14 @@
     "J:\\packages\\NuGet\\cache\\microsoft.windows.cswinrt\\2.2.0\\microsoft.windows.cswinrt.2.2.0.nupkg.sha512",
     "J:\\packages\\NuGet\\cache\\microsoft.windows.sdk.buildtools.msix\\1.7.20250829.1\\microsoft.windows.sdk.buildtools.msix.1.7.20250829.1.nupkg.sha512",
     "J:\\packages\\NuGet\\cache\\shmuelie.winrtserver\\2.1.1\\shmuelie.winrtserver.2.1.1.nupkg.sha512",
+    "J:\\packages\\NuGet\\cache\\microsoft.netcore.app.crossgen2.win-x64\\9.0.10\\microsoft.netcore.app.crossgen2.win-x64.9.0.10.nupkg.sha512",
+    "J:\\packages\\NuGet\\cache\\microsoft.windows.sdk.net.ref\\10.0.26100.68-preview\\microsoft.windows.sdk.net.ref.10.0.26100.68-preview.nupkg.sha512",
     "J:\\packages\\NuGet\\cache\\microsoft.netcore.app.runtime.win-arm64\\9.0.10\\microsoft.netcore.app.runtime.win-arm64.9.0.10.nupkg.sha512",
-    "J:\\packages\\NuGet\\cache\\microsoft.netcore.app.runtime.win-x64\\9.0.10\\microsoft.netcore.app.runtime.win-x64.9.0.10.nupkg.sha512",
+    "J:\\packages\\NuGet\\cache\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.10\\microsoft.aspnetcore.app.runtime.win-x64.9.0.10.nupkg.sha512",
     "J:\\packages\\NuGet\\cache\\microsoft.windowsdesktop.app.runtime.win-arm64\\9.0.10\\microsoft.windowsdesktop.app.runtime.win-arm64.9.0.10.nupkg.sha512",
     "J:\\packages\\NuGet\\cache\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.10\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.10.nupkg.sha512",
     "J:\\packages\\NuGet\\cache\\microsoft.aspnetcore.app.runtime.win-arm64\\9.0.10\\microsoft.aspnetcore.app.runtime.win-arm64.9.0.10.nupkg.sha512",
-    "J:\\packages\\NuGet\\cache\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.10\\microsoft.aspnetcore.app.runtime.win-x64.9.0.10.nupkg.sha512",
-    "J:\\packages\\NuGet\\cache\\microsoft.netcore.app.crossgen2.win-x64\\9.0.10\\microsoft.netcore.app.crossgen2.win-x64.9.0.10.nupkg.sha512",
-    "J:\\packages\\NuGet\\cache\\microsoft.windows.sdk.net.ref\\10.0.26100.68-preview\\microsoft.windows.sdk.net.ref.10.0.26100.68-preview.nupkg.sha512"
+    "J:\\packages\\NuGet\\cache\\microsoft.netcore.app.runtime.win-x64\\9.0.10\\microsoft.netcore.app.runtime.win-x64.9.0.10.nupkg.sha512"
   ],
   "logs": []
 }
