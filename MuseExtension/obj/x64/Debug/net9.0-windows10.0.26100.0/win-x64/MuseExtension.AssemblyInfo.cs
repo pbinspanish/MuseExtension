@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MuseExtension")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+881037d967272047942c3847e32bd54f69693528")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e0d2306b69e808c8b857edeb53f9f5d45ecd8ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("MuseExtension")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MuseExtension")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
