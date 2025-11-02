@@ -16,7 +16,7 @@ public partial class MuseExtensionCommandsProvider : CommandProvider
         DisplayName = "Muse";
         Icon = IconHelpers.FromRelativePath("Assets\\StoreLogo.png");
         _commands = [
-            new CommandItem(new MuseExtensionPage()) { Title = DisplayName },
+            new CommandItem(new MuseExtensionPage()) { Title = DisplayName, Subtitle = "Look up a word." },
         ];
     }
 

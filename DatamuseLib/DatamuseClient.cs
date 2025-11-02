@@ -11,6 +11,13 @@ public class DatamuseDefinition
 	public string Text { get; set; }
 }
 
+
+public struct DatamuseSuggestion
+{
+	public string Word { get; set; }
+	public int Score { get; set; }
+}
+
 public class DatamuseWordResult
 {
 	public string Word { get; set; }
@@ -22,8 +29,90 @@ public class DatamuseClient
 {
 	private static readonly HttpClient httpClient = new HttpClient();
 
+	public static DatamuseSuggestion[] GetSuggestions(string text)
+	{
+		// if there's no input, there can be no suggestions
+		if (string.IsNullOrWhiteSpace(text)) return Array.Empty<DatamuseSuggestion>();
+
+		try
+		{
+			string url = $"https://api.datamuse.com/sug?s={Uri.EscapeDataString(text)}";
+			var response = httpClient.GetStringAsync(url).GetAwaiter().GetResult();
+
+			using var doc = JsonDocument.Parse(response);
+			var results = new List<DatamuseSuggestion>();
+
+			foreach (var item in doc.RootElement.EnumerateArray())
+			{
+				var result = new DatamuseSuggestion
+				{
+					Word = item.TryGetProperty("word", out JsonElement w) ? w.GetString() ?? "" : "",
+					Score = item.TryGetProperty("score", out JsonElement s) ? s.GetInt32() : 0
+				};
+
+				results.Add(result);
+			}
+
+			return results.ToArray();
+		}
+		catch (HttpRequestException)
+		{
+			Console.WriteLine("Network error: unable to reach Datamuse API.");
+			return Array.Empty<DatamuseSuggestion>();
+		}
+		catch (JsonException)
+		{
+			Console.WriteLine("Error parsing API response.");
+			return Array.Empty<DatamuseSuggestion>();
+		}
+		catch (Exception ex)
+		{
+			Console.WriteLine($"Unexpected error: {ex.Message}");
+			return Array.Empty<DatamuseSuggestion>();
+		}
+	}
+
 	public DatamuseWordResult[] GetWordInfo(string word)
 	{
+		// constraints:
+		//   means like
+		//   sounds like
+		//   spelled like
+		//   related words:
+		//     jja
+		//     jjb
+		//     synonyms
+		//     triggers
+		//     antonyms
+		//     kind of (hypernyms)
+		//     more general than (hyponyms)
+		//     comprises (holonyms)
+		//     part of (meronyms)
+		//     frequent followers
+		//     frequent predecessors
+		//     homophones
+		//     consonant match
+
+		// vocabularies
+		//   default (english)
+		//   spanish
+		//   wikipedia en
+
+		// hints:
+		//   topics
+		//   left context
+		//   right context
+
+		// results:
+		//   maximum results
+		//   metadata:
+		//     definitions
+		//     parts of speech
+		//     syllable count
+		//     pronunciation
+		//     word frequency
+
+
 		if (string.IsNullOrWhiteSpace(word))
 			return Array.Empty<DatamuseWordResult>();
 
@@ -88,6 +177,7 @@ public class DatamuseClient
 		"v" => "verb",
 		"adj" => "adjective",
 		"adv" => "adverb",
+		"u" => "unknown",
 		_ => abbr
 	};
 }
